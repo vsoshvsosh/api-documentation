@@ -21,11 +21,11 @@
 }
 ```
 
-Объекты `template`, `page`, `groups` и `smtp` являются объектами Gophish. Их формат можно найти в соответствующих конечных точках API.
+Объекты `template`, `page`, `groups` и `smtp` являются объектами Ruphish. Их формат можно найти в соответствующих конечных точках API.
 
 ### События кампании
 
-Gophish отслеживает каждое событие кампании в её `timeline`. Каждое событие имеет следующий формат:
+Ruphish отслеживает каждое событие кампании в её `timeline`. Каждое событие имеет следующий формат:
 
 ```text
 {
@@ -473,13 +473,13 @@ This method expects the campaign to be provided in JSON format. For the various 
 
 ### Scheduling a Campaign
 
-You can schedule a campaign to launch at a later time. To do this, simply put the desired time you want the campaign to launch in the `launch_date` attribute. Gophish expects the date to be provided in ISO8601 format.
+You can schedule a campaign to launch at a later time. To do this, simply put the desired time you want the campaign to launch in the `launch_date` attribute. Ruphish expects the date to be provided in ISO8601 format.
 
-Without setting a launch date, Gophish launches the campaign immediately.
+Without setting a launch date, Ruphish launches the campaign immediately.
 
 ### Spreading out Emails
 
-By default, Gophish sends all the emails in a campaign as quickly as possible. Instead, you may wish to spread emails out over a period of minutes, hours, days, or weeks. This is possible by setting the `send_by_date` to an ISO8601 formatted datetime. It's important to note that this must be after the `launch_date`.
+By default, Ruphish sends all the emails in a campaign as quickly as possible. Instead, you may wish to spread emails out over a period of minutes, hours, days, or weeks. This is possible by setting the `send_by_date` to an ISO8601 formatted datetime. It's important to note that this must be after the `launch_date`.
 
 {% api-method method="get" host="https://localhost:3333" path="/api/campaigns/:id/results" %}
 {% api-method-summary %}
